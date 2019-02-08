@@ -11,7 +11,6 @@
 }
 
 body {
-    background-color: red;
     font-family: $font-stack;
 }
 
@@ -47,9 +46,27 @@ ul{
         }
     }
 }
-
+// extend INHERITS the .text styles
 #content{
     @extend .text;
 }
 
-// extend
+li:hover{
+    transition: all 2s;
+    position: relative;
+    left: 1200px - (100px);
+}
+
+// loops in sass!
+$num: 4;
+
+@while $num > 0{
+    $num: $num - 1;
+}
+
+@for $i from 1 through 12 {
+    $width: percentage(1/$i);
+    .col-#{$i} {
+        width: $width;
+    }
+}

@@ -5,3 +5,15 @@
         
     }
 }
+
+$show-ads: true;
+
+@if $shows-ads == true {
+    .ads{
+        display: block;
+    }
+} @else {
+    .ads{
+        display: none;
+    }
+}
