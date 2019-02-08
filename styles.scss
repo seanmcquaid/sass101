@@ -1,0 +1,55 @@
+@import"variables.scss";
+@import"mixins.scss";
+// @import"home.scss";
+// @import"navbar.scss";
+
+.text{
+    font-size: 20px;
+    color: #000;
+    line-height: 20px;
+    background-color: blue;
+}
+
+body {
+    background-color: red;
+    font-family: $font-stack;
+}
+
+// instead, we can NEST IT!!!!! 
+// ul li {
+//     list-style-type: none;
+// }
+
+// ul li ul li {
+//     color: cyan;
+// }
+
+ul{
+    li{
+        list-style-type:none; 
+        ul{
+            li{
+                color: white;
+            }
+        }
+    }
+}
+
+#header{
+    float: left;
+    ul{
+        background-color: #ddd;
+        float: left;
+        @include border-radius(10px);
+        li{
+            background-color: rosybrown;
+            @include border-radius(5px);
+        }
+    }
+}
+
+#content{
+    @extend .text;
+}
+
+// extend
